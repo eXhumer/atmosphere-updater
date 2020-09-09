@@ -27,9 +27,6 @@ jobs:
         wget https://github.com/eXhumer/switch-ex-curl/releases/download/v7.69.1-3/switch-ex-curl-7.69.1-3-any.pkg.tar.zst
         wget https://github.com/eXhumer/switch-ex-curl/releases/download/v7.69.1-3/switch-ex-curl-7.69.1-3-any.pkg.tar.zst.sig
 
-    - name: Update packages from dkp-pacman to latest
-      run: sudo dkp-pacman --sync --refresh --sysupgrade --noconfirm
-
     - name: Install switch-ex-curl
       run: sudo dkp-pacman --upgrade --noconfirm switch-ex-curl-7.69.1-3-any.pkg.tar.zst
 
