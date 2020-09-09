@@ -15,25 +15,17 @@ jobs:
   lib-build-test:
     name: Application Build Test
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
+    container: devkitpro/devkita64:latest
 
     steps:
     - name: Checkout master branch
       uses: actions/checkout@v2
 
-    - name: Download dkp-pacman
-      run: wget https://github.com/devkitPro/pacman/releases/download/v1.0.2/devkitpro-pacman.amd64.deb
-
     - name: Download switch-ex-curl
       run: |
         wget https://github.com/eXhumer/switch-ex-curl/releases/download/v7.69.1-3/switch-ex-curl-7.69.1-3-any.pkg.tar.zst
         wget https://github.com/eXhumer/switch-ex-curl/releases/download/v7.69.1-3/switch-ex-curl-7.69.1-3-any.pkg.tar.zst.sig
-
-    - name: Install dkp-pacman dependencies
-      run: sudo apt-get install -y libarchive13
-
-    - name: Install dkp-pacman
-      run: sudo dpkg --install devkitpro-pacman.amd64.deb
 
     - name: Update packages from dkp-pacman to latest
       run: sudo dkp-pacman --sync --refresh --sysupgrade --noconfirm
