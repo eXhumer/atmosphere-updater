@@ -8,7 +8,8 @@ jobs:
     - stage: "Application Build Test"
 
       before_install:
-      - wget https://github.com/eXhumer/switch-ex-curl/releases/download/v7.70.0/switch-ex-curl-7.70.0-1-any.pkg.tar.xz
+      - wget https://github.com/eXhumer/switch-ex-curl/releases/download/v7.69.1-3/switch-ex-curl-7.69.1-3-any.pkg.tar.zst
+      - wget https://github.com/eXhumer/switch-ex-curl/releases/download/v7.69.1-3/switch-ex-curl-7.69.1-3-any.pkg.tar.zst.sig
       - wget https://github.com/devkitPro/pacman/releases/download/devkitpro-pacman-1.0.1/devkitpro-pacman.deb
 
       install:
