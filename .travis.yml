@@ -10,7 +10,7 @@ jobs:
       before_install:
       - wget https://github.com/eXhumer/switch-ex-curl/releases/download/v7.69.1-3/switch-ex-curl-7.69.1-3-any.pkg.tar.zst
       - wget https://github.com/eXhumer/switch-ex-curl/releases/download/v7.69.1-3/switch-ex-curl-7.69.1-3-any.pkg.tar.zst.sig
-      - wget https://github.com/devkitPro/pacman/releases/download/devkitpro-pacman-1.0.1/devkitpro-pacman.deb
+      - wget https://github.com/devkitPro/pacman/releases/download/v1.0.2/devkitpro-pacman.amd64.deb
 
       install:
       - sudo dpkg --install devkitpro-pacman.deb
