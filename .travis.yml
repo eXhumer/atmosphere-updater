@@ -14,7 +14,7 @@ jobs:
 
       install:
 
-      - sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y libarchive13
+      - sudo apt-get update && sudo apt-get install -y libarchive13
       - sudo dpkg --install devkitpro-pacman.amd64.deb
       - sudo dkp-pacman --sync --refresh --sysupgrade --noconfirm
       - sudo dkp-pacman --sync --noconfirm devkitA64 devkit-env libnx switch-sdl2 switch-sdl2_gfx switch-sdl2_image switch-sdl2_ttf switch-freetype  switch-zlib switch-tools switch-bzip2
